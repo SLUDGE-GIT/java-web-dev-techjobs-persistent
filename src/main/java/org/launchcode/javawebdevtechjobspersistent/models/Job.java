@@ -1,6 +1,5 @@
 package org.launchcode.javawebdevtechjobspersistent.models;
 
-import com.sun.istack.NotNull;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -10,11 +9,10 @@ import java.util.List;
 public class Job extends AbstractEntity{
 
     @ManyToOne
-    @NotNull
+
     private Employer employer;
 
    @ManyToMany
-   @NotNull
    private List<Skill> skills = new ArrayList<>();
 
     public Job() {

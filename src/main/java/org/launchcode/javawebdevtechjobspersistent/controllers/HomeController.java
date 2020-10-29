@@ -68,9 +68,9 @@ public class HomeController {
             jobRepository.save(newJob);
             return "redirect:";
         }
-        return "redirect:";
-    }
+            return "redirect:";
 
+    }
 
     @GetMapping("view/{jobId}")
     public String displayViewJob(Model model, @PathVariable int jobId) {
@@ -79,7 +79,8 @@ public class HomeController {
             Job job = optJob.get();
             model.addAttribute("job", job);
             return "view";
+        } else {
+            return "redirect:../";
         }
-        return "view";
     }
 }

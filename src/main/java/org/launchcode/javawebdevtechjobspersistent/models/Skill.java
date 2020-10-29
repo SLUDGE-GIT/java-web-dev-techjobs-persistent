@@ -14,7 +14,7 @@ public class Skill extends AbstractEntity {
             private List<Job> jobs = new ArrayList<>();
    // pretty sure i gotta make a not blank with a size constraint will come back
    @NotBlank
-   @Size(max = 500, message = "Please enter a shorter description")
+   @Size(max = 500)
     private String description;
 
     public Skill(){}
